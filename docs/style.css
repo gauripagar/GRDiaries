@@ -1,0 +1,52 @@
+/* General page styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #fce4ec, #fff);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 2rem;
+  background: #f8bbd0;
+  color: #fff;
+}
+header h1 {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+}
+
+/* Sections */
+.section {
+  padding: 2rem;
+  margin: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Grid layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Headings */
+h2 {
+  color: #ad1457;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li::before {
+  content: "♥ ";
+  color: #e91e63;
+}
