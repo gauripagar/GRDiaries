@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Our Love Story</title>
+  <title>GR Diaries – Our Love Story</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -17,9 +18,19 @@
       background: #f8bbd0;
       color: #fff;
     }
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      margin: 0;
+    nav {
+      background: #ad1457;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     .section {
       padding: 2rem;
@@ -28,100 +39,113 @@
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
     h2 {
       color: #ad1457;
       font-family: 'Playfair Display', serif;
     }
-    ul {
-      list-style: none;
-      padding: 0;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
     }
-    ul li::before {
-      content: "♥ ";
-      color: #e91e63;
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .collapsible {
+      background: #f8bbd0;
+      color: white;
+      cursor: pointer;
+      padding: 1rem;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 1rem;
+      border-radius: 5px;
+      margin-top: 1rem;
+    }
+    .content {
+      padding: 0 1rem;
+      display: none;
+      overflow: hidden;
+      background: #fce4ec;
+      border-radius: 5px;
+      margin-top: 0.5rem;
+    }
+    .checklist input {
+      margin-right: 0.5rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Our Love Story</h1>
-    <p>A Journey of Us</p>
+    <h1>GR Diaries</h1>
+    <p>Our Love Story – A Journey of Us</p>
   </header>
 
-  <div class="grid">
-    <div class="section">
-      <h2>🏆 Hall of Fame</h2>
-      <p>Our achievements & certificates</p>
-    </div>
-    <div class="section">
-      <h2>🤳 Selfie Point</h2>
-      <p>Funny & cute selfies</p>
-    </div>
-    <div class="section">
-      <h2>🎯 Future Goals</h2>
-      <p>My goals & Our goals</p>
+  <nav>
+    <a href="#hall">Hall of Fame</a>
+    <a href="#selfies">Selfies</a>
+    <a href="#notes">Notes</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#bucket">Bucket List</a>
+  </nav>
+
+  <div class="section" id="hall">
+    <h2>🏆 Hall of Fame</h2>
+    <p>Our achievements & certificates</p>
+  </div>
+
+  <div class="section" id="selfies">
+    <h2>🤳 Selfie Point</h2>
+    <p>Funny & cute selfies</p>
+    <div class="gallery">
+      <img src="images/selfie1.jpg" alt="Selfie 1">
+      <img src="images/selfie2.jpg" alt="Selfie 2">
     </div>
   </div>
 
-  <div class="grid">
-    <div class="section">
-      <h2>💌 Heartfelt Notes</h2>
-      <p>Letters & reflections</p>
-    </div>
-    <div class="section">
-      <h2>🎁 Gifts & Wishlist</h2>
-      <p>Received & Wishlist items</p>
+  <div class="section" id="notes">
+    <h2>💌 Heartfelt Notes</h2>
+    <button class="collapsible">Open My Note</button>
+    <div class="content">
+      <p>You are my sunshine on cloudy days 🌸</p>
     </div>
   </div>
 
-  <div class="grid">
-    <div class="section">
-      <h2>🎮 Game Scores</h2>
-      <p>Our gaming challenges</p>
-    </div>
-    <div class="section">
-      <h2>📅 Important Dates</h2>
-      <p>Anniversaries & milestones</p>
+  <div class="section" id="gallery">
+    <h2>📸 Special Events Gallery</h2>
+    <div class="gallery">
+      <img src="images/event1.jpg" alt="Event 1">
+      <img src="images/event2.jpg" alt="Event 2">
+      <img src="images/event3.jpg" alt="Event 3">
     </div>
   </div>
 
-  <div class="grid">
-    <div class="section">
-      <h2>🌍 Our Travels</h2>
-      <p>World map with visited places</p>
-    </div>
-    <div class="section">
-      <h2>📸 Special Events Gallery</h2>
-      <p>Memorable events</p>
+  <div class="section" id="bucket">
+    <h2>✅ Bucket List</h2>
+    <div class="checklist">
+      <label><input type="checkbox"> Trip to Paris</label><br>
+      <label><input type="checkbox"> Cooking class together</label><br>
+      <label><input type="checkbox"> Skydiving adventure</label>
     </div>
   </div>
 
-  <div class="grid">
-    <div class="section">
-      <h2>🌟 Our Firsts</h2>
-      <p>Timeline of first moments</p>
-    </div>
-    <div class="section">
-      <h2>✅ Bucket List</h2>
-      <ul>
-        <li>Trip to Paris</li>
-        <li>Cooking class together</li>
-      </ul>
-    </div>
-    <div class="section">
-      <h2>❤️ Love & Hate Lists</h2>
-      <p>10 things we love & hate</p>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>🎬 Movies & Series</h2>
-    <p>Our watchlist</p>
-  </div>
+  <script>
+    // Collapsible notes
+    const coll = document.getElementsByClassName("collapsible");
+    for (let i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+  </script>
 </body>
 </html>
